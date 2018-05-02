@@ -57,3 +57,8 @@ And to add fields you simply
 class ExistingField(PrettifyDataFromJsonField, serializers.ExistingField):
     pass
 ```
+
+## TODO
+
+1. tests
+2. deep nested key references (dot seperated)
