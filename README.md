@@ -26,7 +26,7 @@ For example:
 is brought under control like so:
 
 ```
-from drf_prettify_json_serializer.fields import (Charfield,
+from drf_prettify_json_serializer_field.fields import (Charfield,
                                                  EmailField,
                                                  DecimalField,
                                                  IntegerField)
