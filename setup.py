@@ -6,7 +6,7 @@ setup(
     version='0.0.1',
     description='You got ugly json, we got a serializer that can massage that data into something useful',
     long_description='Serialize ugly json to pretty json',
-    keywords='mkdocs python markdown extra values',
+    keywords='djangorestframework serializer field json massage presenter-pattern',
     url='https://github.com/rosscdh/drf-prettify-json_serializer-field/',
     author="Ross Crawford-d'Heureuse",
     author_email='sendrossemail@gmail.com',
