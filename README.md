@@ -13,6 +13,9 @@ so if source is defined it will read that from the provided json data.
 For example:
 
 ```
+#
+# argh! my eyes... dear lord! are we enterprise or what?
+#
 {
     "customerID": "123",                     # lowercase uppercase
     "CustomerUID": "abc456",                 # CamelUpper
@@ -26,21 +29,20 @@ For example:
 is brought under control like so:
 
 ```
-from drf_prettify_json_serializer_field.fields import (Charfield,
-                                                 EmailField,
-                                                 DecimalField,
-                                                 IntegerField)
+import drf_prettify_json_serializer_field.fields  as json_source_fields
 
 
 class CustomerSerializer(serializers.Serializer):
-    customer_id = IntegerField(source='customerID')
-    customer_uid = CharField(source='CustomerUID', allow_null=True)
-    email = EmailField(source='CustomerEmail', allow_null=True)
-    card = CharField(source='KundenKarteNr')
-    card_type = IntegerField(source='CardType')
-    store = IntegerField(source='Filial')
+    customer_id = json_source_fields.IntegerField(source='customerID')
+    customer_uid = json_source_fields.CharField(source='CustomerUID', allow_null=True)
+    email = json_source_fields.EmailField(source='CustomerEmail', allow_null=True)
+    card = json_source_fields.CharField(source='KundenKarteNr')
+    card_type = json_source_fields.IntegerField(source='CardType')
+    store = json_source_fields.IntegerField(source='Filial')
 
-
+#
+# ahh better
+#
 {
     "customer_id": 123,
     "customer_uid": "abc456",
