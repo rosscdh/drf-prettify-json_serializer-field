@@ -1,5 +1,11 @@
 from rest_framework import serializers
 
+try:
+    from functools import reduce
+except:
+    # pyton 2 has reduce builtin
+    pass
+
 
 class PrettifyDataFromJsonField(serializers.Field):
     """
@@ -19,6 +25,9 @@ class PrettifyDataFromJsonField(serializers.Field):
         # lists in HTML forms.
         if serializers.html.is_html_input(dictionary):
             return dictionary.getlist(data_source)
+        # account for dot notation
+        if '.' in data_source:
+            return reduce(dict.get, data_source.split('.'), dictionary)
         return dictionary.get(data_source, serializers.empty)
 
 
