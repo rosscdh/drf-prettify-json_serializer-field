@@ -38,7 +38,7 @@ class CustomerSerializer(serializers.Serializer):
     email = json_source_fields.EmailField(source='CustomerEmail', allow_null=True)
     card = json_source_fields.CharField(source='KundenKarteNr')
     card_type = json_source_fields.IntegerField(source='CardType')
-    store = json_source_fields.IntegerField(source='Filial')
+    store = json_source_fields.IntegerField(source='Sill.Seperator.Deepnested.Filial')
 
 #
 # ahh better
@@ -63,4 +63,4 @@ class ExistingField(PrettifyDataFromJsonField, serializers.ExistingField):
 ## TODO
 
 1. tests
-2. deep nested key references (dot seperated)
+2. ~deep nested key references (dot seperated)~
