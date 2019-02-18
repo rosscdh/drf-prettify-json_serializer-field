@@ -10,6 +10,14 @@ so if source is defined it will read that from the provided json data.
 
 **NB** this field class is for serialization of json data only.
 
+## Installation
+
+```sh
+pip install drf-prettify-json-serializer-field
+```
+
+## About
+
 For example:
 
 ```
