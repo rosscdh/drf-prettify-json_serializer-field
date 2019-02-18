@@ -11,12 +11,9 @@ setup(
     author="Ross Crawford-d'Heureuse",
     author_email='sendrossemail@gmail.com',
     license='MIT',
-    python_requires='>=2.7',
-    install_requires=[
-        'mkdocs>=3.8.2'
-    ],
+    python_requires='>=3.6',
+    install_requires=[],
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'Intended Audience :: Information Technology',
         'License :: OSI Approved :: MIT License',
